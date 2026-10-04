@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==================== SEO: page-level ==================== -->
+  <title>Can Dogs Eat That? Dog Food Safety Checker — Safe or Toxic</title>
+  <meta name="description" content="Free instant checker: can dogs eat chocolate, grapes, apples, and 88 human foods? ASPCA &amp; AKC sourced verdicts, toxicity symptoms, and emergency steps. No sign-up.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://candogseat.example.com/">
+
+  <!-- Open Graph / Twitter (share card) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Can Dogs Eat That? Dog Food Safety Checker">
+  <meta property="og:description" content="Type a food, get an instant safe/toxicity verdict with symptoms, advice and emergency steps. Sourced from ASPCA &amp; AKC. No sign-up.">
+  <meta property="og:url" content="https://candogseat.example.com/">
+  <meta property="og:site_name" content="CanDogsEat">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Can Dogs Eat That? Dog Food Safety Checker">
+  <meta name="twitter:description" content="Instant ASPCA/AKC-sourced verdicts on 88 human foods for dogs.">
+  <!-- og:image omitted on purpose (no image asset yet). Add an absolute URL here before launch:
+       <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png"> -->
+
+  <!-- System font stack only — zero network requests, zero FOUT -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ==================== Structured data: WebApplication ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Can Dogs Eat That? Dog Food Safety Checker",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any (web browser)",
+    "description": "Free instant checker for whether human foods are safe for dogs. Sourced from ASPCA and AKC public guidance. No account required.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "isAccessibleForFree": true
+  }
+  </script>
+
+  <!-- ==================== Structured data: FAQPage ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What foods are most toxic to dogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most dangerous foods include chocolate (especially dark and baking chocolate), grapes and raisins, xylitol (an artificial sweetener in sugar-free gum and candy), onions and garlic, macadamia nuts, alcohol, and raw yeast dough. Always contact a veterinarian or a pet poison hotline if your dog eats any of these."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My dog ate something toxic — what should I do first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Write down what your dog ate, how much and when. Call your vet, or ASPCA Animal Poison Control at (888) 426-4435 or Pet Poison Helpline at (855) 764-7661 (both 24/7; a consultation fee may apply). Do not make your dog vomit at home unless a veterinarian tells you to, and keep the packaging or a sample for the vet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is peanut butter safe for dogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Plain, unsalted peanut butter is generally safe in small amounts, but some brands — especially low-sugar or 'healthy' versions — contain xylitol, an artificial sweetener that is extremely toxic to dogs. Always read the label and choose a brand with no xylitol (also called birch sugar)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can dogs eat grapes or raisins?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Grapes and raisins can cause acute kidney injury in dogs, and there is no known safe dose — even a small amount can be dangerous. Treat any grape or raisin ingestion as an emergency and contact your vet or a pet poison hotline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this tool veterinary advice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. This tool provides general information only and is not a veterinary diagnosis or medical advice, and it cannot account for your dog's weight, breed or health conditions. If your dog may have eaten something toxic, contact your veterinarian immediately."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#tool-section" data-i18n="meta.skipToSearch">Skip to search</a>
+
+  <!-- ======================================================================
+       #0 顶栏
+       ==================================================================== -->
+  <header id="app-header" class="app-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#/" aria-label="CanDogsEat home" data-i18n-aria-label="nav.home">
+        <span class="logo-mark" aria-hidden="true">🐕</span>
+        <span class="logo-text">CanDogsEat</span>
+      </a>
+      <nav class="header-nav" aria-label="Header">
+        <a class="header-link header-link--emergency" href="#emergency-banner" data-i18n="nav.emergencyLink">Emergency? Read this</a>
+        <span class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="nav.langGroupLabel">
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true" data-i18n="nav.langEn">EN</button>
+          <button type="button" class="lang-btn" data-lang-btn="zh" aria-pressed="false" data-i18n="nav.langZh">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <!-- ====================================================================
+         #1 Hero + 工具区
+         ================================================================== -->
+    <section id="tool-section" class="tool-section">
+      <h1 class="hero-title" data-i18n="hero.title">Can dogs eat that?</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Type a food — get an instant safe / toxic verdict, the reason, symptoms and what to do. Sourced from ASPCA &amp; AKC. No sign-up. Works offline.</p>
+
+      <div class="search-row">
+        <div class="search-field">
+          <label class="visually-hidden" for="food-input" data-i18n="search.label">Search a food</label>
+          <input
+            id="food-input"
+            type="search"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="e.g. chocolate, grapes, apple…"
+            data-i18n-placeholder="search.placeholder"
+            maxlength="80"
+            aria-label="Search a food"
+            data-i18n-aria-label="search.label"
+            aria-controls="suggest-list"
+            aria-expanded="false"
+            aria-autocomplete="list"
+            role="combobox"
+            aria-describedby="search-hint">
+          <ul id="suggest-list" class="suggest-list" role="listbox" aria-label="Food suggestions" data-i18n-aria-label="search.suggestListLabel" hidden></ul>
+        </div>
+        <button id="search-btn" type="button" class="search-btn" aria-label="Search" data-i18n-aria-label="search.button" data-i18n="search.button">Check</button>
+      </div>
+      <p id="search-hint" class="search-hint" data-i18n="search.hint">Start typing to see suggestions, or pick a common food below.</p>
+
+      <!-- 特征引导入口：不知道食物名字时，用大类 + 外观特征反查（纯前端，无图像识别） -->
+      <div class="identify-entry">
+        <button id="identify-open" type="button" class="identify-cta" aria-haspopup="dialog"
+                aria-controls="identify-panel" aria-expanded="false"
+                data-i18n="identify.cta">I don't know the name</button>
+        <span class="identify-entry-hint" data-i18n="identify.intro">Pick where it came from, then tap what it looks like. We only show foods we have already checked — we never guess a safety level.</span>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         #1b 特征引导弹层（Guided ID）：step1 选大类 → step2 选特征 → step3 候选
+         纯前端索引辅助；命中的食物走既有结果卡，未命中走 UNKNOWN 保守卡。
+         ================================================================== -->
+    <div id="identify-overlay" class="identify-overlay" hidden>
+      <div id="identify-panel" class="identify-panel" role="dialog" aria-modal="true"
+           aria-labelledby="identify-title" aria-label="Guided food finder" data-i18n-aria-label="identify.panelLabel">
+        <div class="identify-panel-head">
+          <h2 id="identify-title" class="identify-title" data-i18n="identify.title">Don't know the name? Find it by looks</h2>
+          <button id="identify-close" type="button" class="identify-close"
+                  aria-label="Close" data-i18n-aria-label="identify.close" data-i18n="identify.close">Close</button>
+        </div>
+        <!-- 步骤指示：Step n of 3 -->
+        <p id="identify-stepcode" class="identify-stepcode" aria-live="polite"></p>
+        <!-- 步骤内容由 app.js 渲染（textContent 安全路径） -->
+        <div id="identify-body" class="identify-body"></div>
+        <!-- 底部导航：返回 / 跳过 / 重新开始 -->
+        <div id="identify-nav" class="identify-nav"></div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         #2 结果卡（动态渲染；默认显示空态引导）
+         ================================================================== -->
+    <section id="result-section" class="result-section" aria-label="Safety result" data-i18n-aria-label="search.resultSectionLabel">
+      <!-- aria-live 由 JS 动态切换 polite/assertive；结果更新时屏幕阅读器通报 -->
+      <div id="result-card" class="result-card" aria-live="polite"></div>
+    </section>
+
+    <!-- AD_SLOT_1: top-banner —— 结果卡下方，responsive 单元（AdSense 接入时替换本注释，勿移位） -->
+    <!-- <div id="ad-slot-1" class="ad-slot" aria-hidden="true"></div> -->
+
+    <!-- ====================================================================
+         #3 常见食物快捷入口
+         ================================================================== -->
+    <section id="quick-chips-section" class="block">
+      <h2 class="block-title" data-i18n="chips.heading">Common foods</h2>
+      <div id="quick-chips" class="chips" role="group" aria-label="Common foods shortcuts" data-i18n-aria-label="chips.groupLabel">
+        <!-- JS 渲染 10 个 chips；noscript 下由下方静态列表兜底 -->
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         #4 紧急指引（常驻折叠条）
+         ================================================================== -->
+    <section id="emergency-banner" class="emergency-banner" aria-labelledby="emergency-heading">
+      <details class="emergency-details">
+        <summary id="emergency-heading" class="emergency-summary">
+          <span class="emergency-icon" aria-hidden="true">⚠</span>
+          <span data-i18n="emergency.summary">My dog ate something toxic — what now?</span>
+        </summary>
+        <ol class="emergency-steps">
+          <li id="em-step1">Write down <strong>what</strong> your dog ate, <strong>how much</strong>, and <strong>when</strong>.</li>
+          <li><span data-i18n="emergency.step2a">Call your vet, or a 24/7 pet poison hotline:</span>
+            <ul class="hotline-list">
+              <li><strong data-i18n="emergency.hotline1">ASPCA Animal Poison Control: (888) 426-4435</strong> <span data-i18n="emergency.hotline1Fee">(consultation fee may apply)</span></li>
+              <li><strong data-i18n="emergency.hotline2">Pet Poison Helpline: (855) 764-7661</strong> <span data-i18n="emergency.hotline1Fee">(consultation fee may apply)</span></li>
+            </ul>
+          </li>
+          <li id="em-step3"><strong>Do NOT make your dog vomit at home</strong> unless a veterinarian instructs you to.</li>
+          <li data-i18n="emergency.step4">Keep the packaging or a sample of the food for the vet.</li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- ====================================================================
+         #5 多食物对比
+         ================================================================== -->
+    <section id="compare-section" class="block compare-section" aria-labelledby="compare-heading">
+      <h2 id="compare-heading" class="block-title"><span data-i18n="compare.heading">Compare foods</span> <span class="muted" data-i18n="compare.upTo4">(up to 4)</span></h2>
+      <div id="compare-tray" class="compare-tray" role="list" aria-label="Foods queued for comparison" data-i18n-aria-label="compare.trayLabel"></div>
+      <div id="compare-grid" class="compare-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- ====================================================================
+         #6 分类浏览索引（SEO 承载：全部 88 条判定文本直接渲染进首屏 DOM）
+         ================================================================== -->
+    <section id="browse-section" class="block browse-section" aria-labelledby="browse-heading">
+      <h2 id="browse-heading" class="block-title" data-i18n="browse.heading">Browse all 88 foods</h2>
+      <p class="block-desc" data-i18n="browse.desc">Every food we cover, with its verdict. Click any row for full details, symptoms and sources.</p>
+      <nav id="category-nav" class="category-nav" aria-label="Food categories" data-i18n-aria-label="browse.categoryNavLabel">
+        <!-- JS 渲染 8 个分类锚点按钮 -->
+      </nav>
+      <div id="browse-index" class="browse-index">
+        <!-- JS 渲染 8 个分类 section，每类含全部食物行 -->
+      </div>
+    </section>
+
+    <!-- FOODS-STATIC-INDEX:START (generated by build/generate-foods-pages.js) -->
+    <section id="foods-static-index" class="block foods-static-index" aria-labelledby="foods-static-index-heading">
+      <h2 id="foods-static-index-heading" class="block-title">All food guides (static pages)</h2>
+      <p class="block-desc">Every food also has its own page with the full verdict, symptoms, advice and sources — readable without JavaScript.</p>
+      <div class="si-grid">
+      <div class="si-cat">
+        <h3>Fruits</h3>
+        <ul>
+          <li><a href="/foods/apple">Can dogs eat Apples? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/banana">Can dogs eat Bananas? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/blueberries">Can dogs eat Blueberries? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/strawberries">Can dogs eat Strawberries? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/watermelon">Can dogs eat Watermelon? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/raspberries">Can dogs eat Raspberries? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/blackberries">Can dogs eat Blackberries? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/cantaloupe">Can dogs eat Cantaloupe? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/mango">Can dogs eat Mango? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/pineapple">Can dogs eat Pineapple? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/peaches">Can dogs eat Peaches? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/pears">Can dogs eat Pears? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/oranges">Can dogs eat Oranges? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/cranberries">Can dogs eat Cranberries? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/cherries">Can dogs eat Cherries? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/lemons-limes">Can dogs eat Lemons &amp; Limes? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/tomatoes">Can dogs eat Tomatoes? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/avocado">Can dogs eat Avocado? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/grapes">Can dogs eat Grapes? <span class="si-lvl badge--severe">SEVERE — ACT NOW</span></a></li>
+          <li><a href="/foods/raisins">Can dogs eat Raisins? <span class="si-lvl badge--severe">SEVERE — ACT NOW</span></a></li>
+        </ul>
+      </div>
+      <div class="si-cat">
+        <h3>Vegetables</h3>
+        <ul>
+          <li><a href="/foods/carrots">Can dogs eat Carrots? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/cucumbers">Can dogs eat Cucumbers? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/green-beans">Can dogs eat Green Beans? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/peas">Can dogs eat Peas? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/pumpkin">Can dogs eat Pumpkin? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/sweet-potato">Can dogs eat Sweet Potatoes? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/broccoli">Can dogs eat Broccoli? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/cauliflower">Can dogs eat Cauliflower? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/celery">Can dogs eat Celery? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/spinach">Can dogs eat Spinach? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/kale">Can dogs eat Kale? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/cabbage">Can dogs eat Cabbage? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/corn">Can dogs eat Corn? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/potatoes">Can dogs eat Potatoes? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/asparagus">Can dogs eat Asparagus? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/bell-peppers">Can dogs eat Bell Peppers? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/mushrooms">Can dogs eat Mushrooms? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/onions">Can dogs eat Onions? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/garlic">Can dogs eat Garlic? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/leeks">Can dogs eat Leeks? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/chives">Can dogs eat Chives? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/scallions">Can dogs eat Scallions &amp; Shallots? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+        </ul>
+      </div>
+      <div class="si-cat">
+        <h3>Proteins</h3>
+        <ul>
+          <li><a href="/foods/chicken">Can dogs eat Cooked Chicken? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/turkey">Can dogs eat Turkey? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/beef">Can dogs eat Cooked Beef? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/pork">Can dogs eat Pork? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/eggs">Can dogs eat Eggs? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/fish">Can dogs eat Fish? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/salmon">Can dogs eat Salmon? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/tuna">Can dogs eat Tuna? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/shrimp">Can dogs eat Shrimp? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/ham">Can dogs eat Ham? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/raw-meat">Can dogs eat Raw Meat? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/bones">Can dogs eat Bones? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+        </ul>
+      </div>
+      <div class="si-cat">
+        <h3>Dairy &amp; Eggs</h3>
+        <ul>
+          <li><a href="/foods/milk">Can dogs eat Milk? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/cheese">Can dogs eat Cheese? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/yogurt">Can dogs eat Yogurt? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/ice-cream">Can dogs eat Ice Cream? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+        </ul>
+      </div>
+      <div class="si-cat">
+        <h3>Grains &amp; Staples</h3>
+        <ul>
+          <li><a href="/foods/bread">Can dogs eat Bread? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/rice">Can dogs eat Rice? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/oatmeal">Can dogs eat Oatmeal? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/pasta">Can dogs eat Pasta? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/quinoa">Can dogs eat Quinoa? <span class="si-lvl badge--safe">SAFE</span></a></li>
+          <li><a href="/foods/popcorn">Can dogs eat Popcorn? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/raw-dough">Can dogs eat Raw Bread Dough? <span class="si-lvl badge--severe">SEVERE — ACT NOW</span></a></li>
+        </ul>
+      </div>
+      <div class="si-cat">
+        <h3>Nuts &amp; Seeds</h3>
+        <ul>
+          <li><a href="/foods/macadamia-nuts">Can dogs eat Macadamia Nuts? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/almonds">Can dogs eat Almonds? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/walnuts">Can dogs eat Walnuts? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/pecans">Can dogs eat Pecans? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/peanuts">Can dogs eat Peanuts? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/cashews">Can dogs eat Cashews? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/peanut-butter">Can dogs eat Peanut Butter? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+        </ul>
+      </div>
+      <div class="si-cat">
+        <h3>Drinks &amp; Sweets</h3>
+        <ul>
+          <li><a href="/foods/coffee">Can dogs eat Coffee? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/tea">Can dogs eat Tea? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/energy-drinks">Can dogs eat Energy Drinks? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/alcohol">Can dogs eat Alcohol? <span class="si-lvl badge--severe">SEVERE — ACT NOW</span></a></li>
+          <li><a href="/foods/honey">Can dogs eat Honey? <span class="si-lvl badge--moderation">OK IN MODERATION</span></a></li>
+          <li><a href="/foods/candy">Can dogs eat Candy? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/cake">Can dogs eat Cake &amp; Cookies? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/chocolate">Can dogs eat Chocolate? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+          <li><a href="/foods/dark-chocolate">Can dogs eat Dark Chocolate? <span class="si-lvl badge--severe">SEVERE — ACT NOW</span></a></li>
+          <li><a href="/foods/white-chocolate">Can dogs eat White Chocolate? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/nutella">Can dogs eat Nutella &amp; Chocolate Spread? <span class="si-lvl badge--toxic">TOXIC</span></a></li>
+        </ul>
+      </div>
+      <div class="si-cat">
+        <h3>Processed &amp; Toxic</h3>
+        <ul>
+          <li><a href="/foods/xylitol">Can dogs eat Xylitol (Sugar-Free Sweetener)? <span class="si-lvl badge--severe">SEVERE — ACT NOW</span></a></li>
+          <li><a href="/foods/french-fries">Can dogs eat French Fries? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/pizza">Can dogs eat Pizza? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/hot-dogs">Can dogs eat Hot Dogs &amp; Processed Meat? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+          <li><a href="/foods/ketchup">Can dogs eat Ketchup? <span class="si-lvl badge--caution">CAUTION</span></a></li>
+        </ul>
+      </div>
+      </div>
+    </section>
+<!-- FOODS-STATIC-INDEX:END -->
+
+    <!-- AD_SLOT_2: in-feed —— 分类索引 Fruits 区块后，信息流单元 -->
+    <!-- <div id="ad-slot-2" class="ad-slot" aria-hidden="true"></div> -->
+
+    <!-- ====================================================================
+         #7 FAQ
+         ================================================================== -->
+    <section id="faq-section" class="block faq-section" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="block-title" data-i18n="faq.heading">Frequently asked questions</h2>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q1">What foods are most toxic to dogs?</summary>
+        <p data-i18n="faq.a1">The most dangerous foods include chocolate (especially dark and baking chocolate), grapes and raisins, xylitol (an artificial sweetener in sugar-free gum and candy), onions and garlic, macadamia nuts, alcohol, and raw yeast dough. Always contact a veterinarian or a pet poison hotline if your dog eats any of these.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q2">My dog ate something toxic — what should I do first?</summary>
+        <p data-i18n="faq.a2">Write down what your dog ate, how much and when. Call your vet, or ASPCA Animal Poison Control at (888) 426-4435 or Pet Poison Helpline at (855) 764-7661 (both 24/7; a consultation fee may apply). Do not make your dog vomit at home unless a veterinarian tells you to, and keep the packaging or a sample for the vet.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q3">Is peanut butter safe for dogs?</summary>
+        <p data-i18n="faq.a3">Plain, unsalted peanut butter is generally safe in small amounts, but some brands — especially low-sugar or "healthy" versions — contain xylitol, an artificial sweetener that is extremely toxic to dogs. Always read the label and choose a brand with no xylitol (also called birch sugar).</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q4">Can dogs eat grapes or raisins?</summary>
+        <p data-i18n="faq.a4">No. Grapes and raisins can cause acute kidney injury in dogs, and there is no known safe dose — even a small amount can be dangerous. Treat any grape or raisin ingestion as an emergency and contact your vet or a pet poison hotline.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq.q5">Is this tool veterinary advice?</summary>
+        <p data-i18n="faq.a5">No. This tool provides general information only and is not a veterinary diagnosis or medical advice, and it cannot account for your dog's weight, breed or health conditions. If your dog may have eaten something toxic, contact your veterinarian immediately.</p>
+      </details>
+    </section>
+
+    <!-- 无 JS 时的静态安全信息（核心安全信息不依赖 JS） -->
+    <noscript>
+      <section class="noscript-block" aria-label="Static safety information">
+        <h2>⚠ JavaScript is off — here are the essentials</h2>
+        <p>This checker uses JavaScript, but the most important safety information is below.</p>
+        <h3>Top 10 most dangerous foods for dogs</h3>
+        <ul>
+          <li><strong>Chocolate</strong> (dark &amp; baking are worst) — theobromine toxicity</li>
+          <li><strong>Grapes &amp; raisins</strong> — acute kidney injury, no known safe dose</li>
+          <li><strong>Xylitol</strong> (sugar-free gum/candy) — hypoglycemia and liver failure</li>
+          <li><strong>Onions, garlic, leeks, chives, scallions</strong> — anemia</li>
+          <li><strong>Macadamia nuts</strong> — weakness, tremors, hind-leg paralysis</li>
+          <li><strong>Alcohol</strong> — no safe amount</li>
+          <li><strong>Coffee &amp; caffeine</strong> — stimulant toxicity</li>
+          <li><strong>Raw yeast dough</strong> — alcohol + gas bloat</li>
+          <li><strong>Avocado</strong> — fat and pit hazards (avoid)</li>
+          <li><strong>Wild mushrooms</strong> — many are deadly; treat ingestion as an emergency</li>
+        </ul>
+        <p><strong>Emergency hotlines (24/7):</strong> ASPCA Animal Poison Control (888) 426-4435 · Pet Poison Helpline (855) 764-7661. If in doubt, call your vet — do not induce vomiting unless a vet tells you to.</p>
+      </section>
+    </noscript>
+  </main>
+
+  <!-- AD_SLOT_3: footer-leaderboard —— 页脚上方，leaderboard 单元 -->
+  <!-- <div id="ad-slot-3" class="ad-slot" aria-hidden="true"></div> -->
+
+  <!-- ======================================================================
+       #8 页脚
+       ==================================================================== -->
+  <footer id="footer" class="footer">
+    <div class="wrap footer-inner">
+      <!-- AFFILIATE_SLOT: pet-insurance —— 宠物保险联盟位（Lemonade 等），本页 severe/toxic 场景天然相关；本次不接 -->
+      <!-- <div id="affiliate-slot" class="affiliate-slot" aria-hidden="true"></div> -->
+
+      <section class="disclaimer" id="disclaimer-full" aria-labelledby="disclaimer-heading">
+        <h2 id="disclaimer-heading" class="disclaimer-title" data-i18n="footer.disclaimerHeading">Disclaimer — please read</h2>
+        <ol class="disclaimer-list">
+          <li id="d1">This tool provides <strong>general information only</strong>. It is <strong>not veterinary advice, diagnosis or treatment</strong> and is no substitute for a consultation with a licensed veterinarian.</li>
+          <li id="d2"><strong>In an emergency, contact your veterinarian immediately</strong>, or a 24/7 pet poison hotline: ASPCA Animal Poison Control <strong>(888) 426-4435</strong> or Pet Poison Helpline <strong>(855) 764-7661</strong> (a consultation fee may apply).</li>
+          <li id="d3">Verdicts are compiled from public guidance published by ASPCA, AKC, PetMD and veterinary practices. <strong>Individual factors</strong> — your dog's weight, breed, age and existing health conditions — can change the real risk, and dose matters.</li>
+          <li id="d4">Do not use this tool to decide whether to delay seeking care. When in doubt, call your vet. Data last reviewed: <strong>2026-10-03</strong>.</li>
+        </ol>
+      </section>
+
+      <section class="sources-list" aria-labelledby="sources-heading">
+        <h2 id="sources-heading" class="footer-h" data-i18n="footer.sourcesHeading">Sources</h2>
+        <ul id="footer-sources">
+          <!-- JS 渲染 SOURCES 外链表；noscript 下为空但正文已提机构名 -->
+        </ul>
+      </section>
+
+      <p class="footer-bottom">
+        <span class="testbadge" data-i18n="footer.testBadge">Test build — not launched</span>
+        <span data-i18n="footer.bottom">CanDogsEat · Educational tool · No cookies, no tracking, no sign-up.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
